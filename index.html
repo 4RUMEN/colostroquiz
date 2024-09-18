@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Criação de Bezerros - Semana 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .content {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .question {
+            margin-top: 20px;
+            color: #2c3e50;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .options button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            text-align: left;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .options button:hover {
+            background-color: #2980b9;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .feedback.correct {
+            color: #27ae60;
+        }
+        .feedback.incorrect {
+            color: #c0392b;
+        }
+        .answer {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+        }
+        .show-answer {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .show-answer:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Semana 1: Introdução à Criação de Bezerros</h1>
+        
+        <h2>1. Princípios da boa criação de bezerros</h2>
+        <p>A criação de bezerros é fundamental para o sucesso de uma fazenda leiteira. Os princípios básicos incluem:</p>
+        <ul>
+            <li>Fornecimento adequado de colostro nas primeiras 6 horas de vida</li>
+            <li>Nutrição balanceada com 20-22% de proteína bruta na dieta inicial</li>
+            <li>Ambiente limpo e confortável com temperatura entre 10-26°C</li>
+            <li>Monitoramento diário de saúde, observando sinais vitais e comportamento</li>
+        </ul>
+
+        <div class="question" id="question1">
+            <p>Qual é a quantidade recomendada de colostro que um bezerro deve receber nas primeiras 12 horas de vida?</p>
+            <div class="options">
+                <button onclick="this.disabled=true; this.parentNode.querySelectorAll('button').forEach(b => b.disabled=true); document.getElementById('q1-feedback').textContent='Incorreto. Tente novamente ou veja a explicação completa.'; document.getElementById('q1-feedback').className='feedback incorrect';">a) 5-7% do peso corporal</button>
+                <button onclick="this.disabled=true; this.parentNode.querySelectorAll('button').forEach(b => b.disabled=true); document.getElementById('q1-feedback').textContent='Correto!'; document.getElementById('q1-feedback').className='feedback correct';">b) 10-12% do peso corporal</button>
+                <button onclick="this.disabled=true; this.parentNode.querySelectorAll('button').forEach(b => b.disabled=true); document.getElementById('q1-feedback').textContent='Incorreto. Tente novamente ou veja a explicação completa.'; document.getElementById('q1-feedback').className='feedback incorrect';">c) 15-18% do peso corporal</button>
+                <button onclick="this.disabled=true; this.parentNode.querySelectorAll('button').forEach(b => b.disabled=true); document.getElementById('q1-feedback').textContent='Incorreto. Tente novamente ou veja a explicação completa.'; document.getElementById('q1-feedback').className='feedback incorrect';">d) 20-25% do peso corporal</button>
+            </div>
+            <p id="q1-feedback" class="feedback"></p>
+            <button onclick="var answer = this.nextElementSibling; if (answer.style.display === 'block') { answer.style.display = 'none'; this.textContent = 'Ver explicação completa'; } else { answer.style.display = 'block'; this.textContent = 'Ocultar explicação'; }" class="show-answer">Ver explicação completa</button>
+            <div class="answer">
+                A resposta correta é b) 10-12% do peso corporal. Um bezerro deve receber 10-12% do seu peso corporal em colostro nas primeiras 12 horas de vida. Para um bezerro de 40 kg, isso significa 4-4,8 litros de colostro. Idealmente, a primeira alimentação de 2-3 litros deve ocorrer dentro das primeiras 2 horas após o nascimento, seguida por uma segunda alimentação de 1,5-2 litros entre 6-12 horas após o nascimento. Isso garante que o bezerro receba aproximadamente 200-300 g de imunoglobulinas, essenciais para sua imunidade passiva.
+            </div>
+        </div>
+
+        <h2>2. O trato digestivo do bezerro</h2>
+        <p>O sistema digestivo do bezerro passa por mudanças significativas nas primeiras 8 semanas de vida:</p>
+        <ul>
+            <li>Ao nascer, o abomaso representa cerca de 60% do volume total do estômago</li>
+            <li>O rúmen se desenvolve de aproximadamente 25% do volume total ao nascer para 65% às 8 semanas</li>
+            <li>A transição de monogástrico para ruminante funcional ocorre entre 6-8 semanas de idade</li>
+        </ul>
+
+        <div class="question" id="question2">
+            <p>Qual é a porcentagem aproximada do volume total do estômago que o rúmen representa às 8 semanas de idade?</p>
+            <div class="options">
+                <button onclick="this.disabled=true; this.parentNode.querySelectorAll('button').forEach(b => b.disabled=true); document.getElementById('q2-feedback').textContent='Incorreto. Tente novamente ou veja a explicação completa.'; document.getElementById('q2-feedback').className='feedback incorrect';">a) 25%</button>
+                <button onclick="this.disabled=true; this.parentNode.querySelectorAll('button').forEach(b => b.disabled=true); document.getElementById('q2-feedback').textContent='Incorreto. Tente novamente ou veja a explicação completa.'; document.getElementById('q2-feedback').className='feedback incorrect';">b) 45%</button>
+                <button onclick="this.disabled=true; this.parentNode.querySelectorAll('button').forEach(b => b.disabled=true); document.getElementById('q2-feedback').textContent='Correto!'; document.getElementById('q2-feedback').className='feedback correct';">c) 65%</button>
+                <button onclick="this.disabled=true; this.parentNode.querySelectorAll('button').forEach(b => b.disabled=true); document.getElementById('q2-feedback').textContent='Incorreto. Tente novamente ou veja a explicação completa.'; document.getElementById('q2-feedback').className='feedback incorrect';">d) 85%</button>
+            </div>
+            <p id="q2-feedback" class="feedback"></p>
+            <button onclick="var answer = this.nextElementSibling; if (answer.style.display === 'block') { answer.style.display = 'none'; this.textContent = 'Ver explicação completa'; } else { answer.style.display = 'block'; this.textContent = 'Ocultar explicação'; }" class="show-answer">Ver explicação completa</button>
+            <div class="answer">
+                A resposta correta é c) 65%. O desenvolvimento do rúmen aumenta significativamente a capacidade de digestão do bezerro:
+                <ul>
+                    <li>Semana 1: O bezerro pode digerir apenas leite ou substituto do leite.</li>
+                    <li>Semanas 2-3: Início da fermentação ruminal, com capacidade limitada de digerir pequenas quantidades de grãos.</li>
+                    <li>Semanas 4-6: O rúmen cresce para cerca de 50% do volume estomacal total. O bezerro pode digerir até 250-300 g/dia de concentrado inicial.</li>
+                    <li>Semanas 7-8: O rúmen atinge 65% do volume estomacal. O bezerro pode consumir e digerir eficientemente 1-1,5 kg/dia de concentrado, permitindo o início do desmame.</li>
+                </ul>
+                Este desenvolvimento gradual permite a transição de uma dieta líquida para uma dieta sólida, típica de bovinos adultos, essencial para o crescimento eficiente e econômico do animal.
+            </div>
+        </div>
+
+        <h2>3. A importância do colostro</h2>
+        <p>O colostro é o primeiro leite produzido pela vaca após o parto e é essencial para a saúde do bezerro:</p>
+        <ul>
+            <li>Rico em anticorpos: contém 50-150 g/L de imunoglobulinas (principalmente IgG)</li>
+            <li>Contém nutrientes concentrados: 2x mais proteína e 5x mais gordura que o leite normal</li>
+            <li>Fornece vitaminas A, D e E em concentrações 5-10 vezes maiores que o leite normal</li>
+        </ul>
+
+        <div class="question" id="question3">
+            <p>Após quantas horas do nascimento a absorção de IgG pelo bezerro cai para menos de 1%?</p>
+            <div class="options">
+                <button onclick="this.disabled=true; this.parentNode.querySelectorAll('button').forEach(b => b.disabled=true); document.getElementById('q3-feedback').textContent='Incorreto. Tente novamente ou veja a explicação completa.'; document.getElementById('q3-feedback').className='feedback incorrect';">a) 6 horas</button>
+                <button onclick="this.disabled=true; this.parentNode.querySelectorAll('button').forEach(b => b.disabled=true); document.getElementById('q3-feedback').textContent='Incorreto. Tente novamente ou veja a explicação completa.'; document.getElementById('q3-feedback').className='feedback incorrect';">b) 12 horas</button>
+                <button onclick="this.disabled=true; this.parentNode.querySelectorAll('button').forEach(b => b.disabled=true); document.getElementById('q3-feedback').textContent='Incorreto. Tente novamente ou veja a explicação completa.'; document.getElementById('q3-feedback').className='feedback incorrect';">c) 18 horas</button>
+                <button onclick="this.disabled=true; this.parentNode.querySelectorAll('button').forEach(b => b.disabled=true); document.getElementById('q3-feedback').textContent='Correto!'; document.getElementById('q3-feedback').className='feedback correct';">d) 24 horas</button>
+            </div>
+            <p id="q3-feedback" class="feedback"></p>
+            <button onclick="var answer = this.nextElementSibling; if (answer.style.display === 'block') { answer.style.display = 'none'; this.textContent = 'Ver explicação completa'; } else { answer.style.display = 'block'; this.textContent = 'Ocultar explicação'; }" class="show-answer">Ver explicação completa</button>
+            <div class="answer">
+                A resposta correta é d) 24 horas. A absorção de IgG diminui rapidamente após o nascimento:
+                <ul>
+                    <li>0-6 horas: 66% de absorção</li>
+                    <li>6-12 horas: 47% de absorção</li>
+                    <li>12-18 horas: 12% de absorção</li>
+                    <li>Após 24 horas: menos de 1% de absorção</li>
+                </ul>
+                Portanto, fornecer colostro de alta qualidade (>50 g/L de IgG) nas primeiras 2-6 horas de vida é fundamental para garantir a saúde e a sobrevivência a longo prazo do bezerro. Bezerros que recebem colostro adequado nas primeiras 6 horas têm 50% menos chances de morrer antes do desmame e 30% mais chances de sobreviver após o primeiro parto (no caso de novilhas).
+            </div>
+        </div>
+    </div>
+</body>
+</html>
